@@ -63,6 +63,7 @@ class NullHandler(BaseEstimator, TransformerMixin):
 
 
 
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -152,7 +153,6 @@ class DataCleaner(BaseEstimator, TransformerMixin):
             plt.show()
 
 
-
 import pandas as pd
 import numpy as np
 from sklearn.base import BaseEstimator, TransformerMixin
@@ -215,6 +215,7 @@ class SelectiveOneHotEncoder(BaseEstimator, TransformerMixin):
 
 
 
+
 # Custom transformer for applying WoE encoding
 class WoECategoricalEncoder(BaseEstimator, TransformerMixin):
     def __init__(self, n_bins=2, strategy='quantile'):
@@ -248,7 +249,8 @@ class WoECategoricalEncoder(BaseEstimator, TransformerMixin):
             X_transformed[cat_cols] = self.woe_encoder.transform(X[cat_cols])
             
         return X_transformed
-    
+
+
 
 from sklearn.base import BaseEstimator, TransformerMixin
 import numpy as np
